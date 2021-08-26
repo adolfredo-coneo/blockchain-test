@@ -1,0 +1,22 @@
+//Init
+npm init
+
+//solidity compiler
+npm install solc
+
+//mocha
+npm install mocha
+
+//ganache
+npm install ganache-cli
+
+//web3
+npm install web3
+
+//GIT
+git init
+git commit -m "Initializing Repo"
+git branch -M main
+git remote add origin https://github.com/adolfredo-coneo/Expensis-web.git
+git push -u origin main
+
