@@ -2,13 +2,18 @@ const path = require('path');
 const fs = require('fs');
 const solc = require('solc');
 
-const inboxPath = path.resolve(__dirname, 'contracts', 'Inbox.sol');
-const inboxSource = fs.readFileSync(inboxPath, 'utf-8');
+const inboxPath = path.resolve(__dirname, 'contracts', 'inbox.sol');
+
+const inboxSource = fs.readFileSync(inboxPath, 'utf8');
+
+//const compile = solc.compile(inboxSource, 1).contracts[':inbox'];
+
+//module.exports = compile;
 
 const input = {
   language: 'Solidity',
   sources: {
-    'Inbox.sol': {
+    'inbox.sol': {
       content: inboxSource,
     },
   },
@@ -21,12 +26,12 @@ const input = {
   },
 };
 
-console.log(
-  JSON.parse(solc.compile(JSON.stringify(input))).contracts['Inbox.sol'][
+/*console.log(
+  JSON.parse(solc.compile(JSON.stringify(input))).contracts['inbox.sol'][
     'Inbox'
   ]
-);
+);*/
 
 module.exports = JSON.parse(solc.compile(JSON.stringify(input))).contracts[
-  'Inbox.sol'
+  'inbox.sol'
 ]['Inbox'];

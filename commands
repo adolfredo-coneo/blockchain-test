@@ -15,8 +15,9 @@ npm install web3
 
 //GIT
 git init
+git add .
 git commit -m "Initializing Repo"
 git branch -M main
-git remote add origin https://github.com/adolfredo-coneo/Expensis-web.git
+git remote add origin https://github.com/adolfredo-coneo/blockchain-test.git
 git push -u origin main
 
