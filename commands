@@ -13,6 +13,9 @@ npm install ganache-cli
 //web3
 npm install web3
 
+//truffle/hdwallet-provider
+npm install @truffle/hdwallet-provider
+
 //GIT
 git init
 git add .
